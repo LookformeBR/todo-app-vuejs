@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2 class="text-center mt-5">My Vue Todo App</h2>
+    <h2 class="text-center mt-5">Meu aplicativo Vue Todo</h2>
 
     <!-- INPUT -->
     <div class="d-flex mt-5">
@@ -8,20 +8,20 @@
         v-model="task"
         type="text"
         class="form-control"
-        placeholder="Enter Task"
+        placeholder="Digite a tarefa"
         name=""
         id=""
       />
       <button @click="submitTask" class="btn btn-warning rounded-0">
-        Submit
+        Enviar
       </button>
     </div>
 
-    <!-- task table -->
+    <!-- Tarefa table -->
     <table class="table table-bordered mt-5">
       <thead>
         <tr>
-          <th scope="col">Task</th>
+          <th scope="col">Tarefa</th>
           <th scope="col">Status</th>
           <th scope="col" class="text-center">#</th>
           <th scope="col" class="text-center">#</th>
@@ -30,7 +30,7 @@
       <tbody>
         <tr v-for="(task, index) in tasks" :key="index">
           <td>
-            <span :class="{ finished: task.status === 'finished' }">{{
+            <span :class="{ Finalizado : task.status === 'Finalizado ' }">{{
               task.name
             }}</span>
           </td>
@@ -39,9 +39,9 @@
               @click="changeStatus(index)"
               class="pointer"
               :class="{
-                'text-danger': task.status === 'to-do',
-                'text-warning': task.status === 'in-progress',
-                'text-success': task.status === 'finished ',
+                'text-success': task.status === 'A Ser Feito',
+                'text-warning': task.status === 'Em Progresso',
+                'text-danger': task.status === 'Finalizado  ',
               }"
               >{{ firstCharUpper(task.status) }}</span
             >
@@ -70,15 +70,15 @@ export default {
     return {
       task: "",
       editedTask: null,
-      availableStatuses: ["to-do", "in-progress", "finished"],
+      availableStatuses: ["A Ser Feito", "Em Progresso", "Finalizado "],
       tasks: [
         {
-          name: "Steal Bananas From The Store.",
-          status: "to-do",
+          name: "Pegar Crianças na Escola.",
+          status: "A Ser Feito",
         },
         {
-          name: "Eat 1kg chocolate in 1 hour",
-          status: "in-progress",
+          name: "Fazer Compras no Mercado",
+          status: "Em Progresso",
         },
       ],
     };
@@ -90,7 +90,7 @@ export default {
       if (this.editedTask === null) {
         this.tasks.push({
           name: this.task,
-          status: "to-do",
+          status: "A Ser Feito",
         });
       } else {
         this.tasks[this.editedTask].name = this.task;
@@ -124,7 +124,7 @@ export default {
   cursor: pointer;
 }
 
-.finished {
+.Finalizado  {
   text-decoration: line-through;
 }
 </style>
