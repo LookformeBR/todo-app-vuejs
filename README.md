@@ -4,7 +4,7 @@
 
 Um app de lista de tarefas desenvolvido com vuejs, você pode adicionar, editadas e removidas, é possível mudar o status de cada tarefa, para que você possa mudar de acordo com o progresso da tarefa.
 
-
+ <img width="100%" style="border-radius: 5px" height="auto" src="https://hylla.com.br/gif/todo.gif" alt="Intro">
 
 
 ## Project setup
