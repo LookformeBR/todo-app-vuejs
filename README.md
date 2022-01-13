@@ -1,6 +1,8 @@
 # Todo App
 
-## Um Clássico Todo App com Vuejs
+## Um classico aplicativo de lista de tarefas
+
+Um app de lista de tarefas desenvolvido com vuejs, você pode adicionar, editadas e removidas, é possível mudar o status de cada tarefa, para que você possa mudar de acordo com o progresso da tarefa.
 
 
 
